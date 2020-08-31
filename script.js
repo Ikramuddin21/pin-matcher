@@ -6,8 +6,8 @@ document.getElementById("matchImg").style.display = "none";
 const generateBtn = document.getElementById("generateBtn");
 generateBtn.addEventListener("click",function(){
     const fourDigit = 1000 + Math.random() * 9000;
-    const showValue = Math.floor(fourDigit);
-    printInput("generateInput", showValue);
+    const numberFloor = Math.floor(fourDigit);
+    printInput("generateInput", numberFloor);
 })
 
 // calculator number button event handler
@@ -57,11 +57,6 @@ const reduceBtn = document.getElementsByClassName("reduceBtn");
             displayImages("dontMatchImg", "matchImg");
         }
     });
-
-    // submit button remove
-    const submitBtn = document.getElementById("submitBtn");
-    let tryLeft = 0;
-    submitBtn.style.display = tryLeft === 3 ? "none" : "block";
 
 function getInput(id){
     return document.getElementById(id).value;
